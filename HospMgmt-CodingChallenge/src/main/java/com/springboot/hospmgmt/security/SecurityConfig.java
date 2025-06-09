@@ -24,6 +24,9 @@ public class SecurityConfig {
 				.authorizeHttpRequests(authorize -> authorize
 						.requestMatchers("/api/patient/register","/api/patient/login").permitAll()
 						.requestMatchers("/api/doctor/register","/api/doctor/login").permitAll()
+						.requestMatchers("/api/medical-history/patient/add/**").permitAll()
+						.requestMatchers("/api/appointments/assign").permitAll()
+						.requestMatchers("/api/appointments/by-doctor/**").hasAuthority("DOCTOR")
 						.anyRequest().authenticated()
 				)
 				.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
