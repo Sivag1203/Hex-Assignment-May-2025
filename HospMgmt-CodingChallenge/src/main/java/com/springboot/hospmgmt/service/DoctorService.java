@@ -23,7 +23,7 @@ public class DoctorService {
 
         Doctor d = new Doctor();
         d.setName(doctor.getName());
-        d.setSpciality(doctor.getSpeciality());
+        d.setSpeciality(doctor.getSpeciality());
         d.setAuth(savedAuth);
 
         Doctor saved = doctorRepository.save(d);

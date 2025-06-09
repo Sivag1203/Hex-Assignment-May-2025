@@ -37,7 +37,7 @@ public class Doctor {
 	public Speciality getSpeciality() {
 		return speciality;
 	}
-	public void setSpciality(Speciality speciality) {
+	public void setSpeciality(Speciality speciality) {
 		this.speciality = speciality;
 	}
 	public Auth getAuth() {
