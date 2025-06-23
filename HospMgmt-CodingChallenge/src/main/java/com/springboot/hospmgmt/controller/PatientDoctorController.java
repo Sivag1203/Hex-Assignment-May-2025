@@ -39,8 +39,7 @@ public class PatientDoctorController {
         PatientDoctor assigned = service.assignDoctorToPatient(patient, doctor);
         return ResponseEntity.ok(assigned);
     }
-
-
+    
     @GetMapping("/by-doctor/{doctorId}")
     public ResponseEntity<List<PatientDoctor>> getPatientsByDoctor(@PathVariable int doctorId) {
         List<PatientDoctor> list = service.getPatientsByDoctorId(doctorId);
