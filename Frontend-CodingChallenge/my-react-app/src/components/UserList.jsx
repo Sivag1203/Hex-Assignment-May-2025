@@ -64,7 +64,6 @@ const UserList = () => {
         </tbody>
       </table>
 
-      {/* Page buttons */}
       <div className="d-flex justify-content-center mt-3">
         <button
           className={`btn btn-outline-primary me-2 ${page === 1 ? "active" : ""}`}
